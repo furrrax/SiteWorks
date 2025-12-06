@@ -1,10 +1,51 @@
-@@include('html/header.html',{"title":"Главная - ViteVerst"})
-<section class="home" data-fullscreen>
-  <div class="home__logo">
-    <span class="home__name">Vite</span>
-    <span class="home__2112">Verst</span>
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="shortcut icon" href="@files/favicon.png">
+  <title>Сайтворкс | Главная</title>
+  <link rel="stylesheet" href="@scss/main.scss">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    @@include('html/header.html')
+
+    <main class="main">
+
+      @@include('html/sections/start.html')
+      @@include('html/sections/focus.html')
+      @@include('html/sections/stage.html')
+      @@include('html/sections/team.html')
+      @@include('html/sections/price.html')
+      @@include('html/sections/case.html')
+      @@include('html/sections/order.html')
+      @@include('html/sections/benefits.html')
+
+    </main>
+
+    @@include('html/footer.html')
+
   </div>
-  <a class="home__link" href="about.html">Ознакомиться со сборкой</a>
-  <a class="home__link-rem" href="rem.html">Демонстрация REM</a>
-</section>
-@@include('html/footer.html')
+
+  <!-- Модалки -->
+  @@include('modals.html')
+
+  <!-- SVG -->
+  @@include('svg.html')
+
+  <script src="@vendor/fls/fls.js"></script>
+  <script src="@vendor/jquery/3.6.0jquery.min.js"></script>
+  <script src="@vendor/gsap/gsap.min.js"></script>
+  <script src="@vendor/split-text/SplitTextJS.js"></script>
+  <script src="@vendor/rem/rem.js"></script>
+  <script type="module" src="@js/app.js" defer></script>
+</body>
+
+</html>

@@ -108,3 +108,5 @@ function initScrollProgressBar() {
     requestAnimationFrame(updateProgressBar);
   });
 }
+
+//Дальше наш код, можно импортами

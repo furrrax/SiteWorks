@@ -609,7 +609,7 @@ a {
   @include tran;
 
   &:hover {
-    color: $textcolor;
+    // color: $textcolor; // при ховере ссылки становятся черными (либо цвет меняем, либо удаляем строку). так же ховер такой же есть в папке  reset, его тоже пока закоменчу
     text-decoration: none;
   }
 }

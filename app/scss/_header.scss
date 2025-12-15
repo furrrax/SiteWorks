@@ -1,1 +1,112 @@
 // Тут будут стили для хедера
+.header {
+  background-color: #0b0d0d;
+  height: 6.8rem;
+  box-shadow: 0.1rem 0 2rem 1.1rem rgb(0 0 0),
+    inset 0 0 2rem -1rem rgb(0 0 0 / 50%);
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2.2rem;
+  }
+  &__logo {
+    display: flex;
+    width: 16.6rem;
+    color: #ffffff;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 47%;
+      left: 72%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 65%;
+      background-color: #0be925;
+      border-radius: 25%;
+      opacity: 0.3;
+      z-index: 0;
+      filter: blur(10px);
+      box-shadow: 9px 4px 20px 0px #0be925;
+    }
+  }
+  &__social {
+    display: flex;
+    color: #696969;
+    gap: 0.8rem;
+    align-items: center;
+    &__link {
+      color: #ffffff;
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 1;
+      letter-spacing: 0.05rem;
+      text-align: center;
+      &:hover {
+        color: #14f958;
+      }
+      &__el {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1;
+        letter-spacing: 0.05rem;
+        // text-align: center;
+      }
+    }
+  }
+}
+.logo__content {
+  display: flex;
+  padding-right: 0.3rem;
+  text-transform: uppercase;
+  align-items: center;
+  font-family: "FE Hero";
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 100%;
+  letter-spacing: 0.1rem;
+  text-align: center;
+}
+.logo__text {
+  z-index: 1;
+  &__green {
+    color: #0be925;
+  }
+}
+
+.logo__textEnd {
+  z-index: 1;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  line-height: 1.11;
+  letter-spacing: 0;
+  text-transform: lowercase;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  gap: 4rem;
+  &__item__link {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+    letter-spacing: 0.05rem;
+    text-align: center;
+
+    &:hover {
+      color: #14f958;
+    }
+  }
+}

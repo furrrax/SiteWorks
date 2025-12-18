@@ -26,6 +26,14 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 @include font(Gilroy, 'Gilroy-Black', 900, 'normal');
 @include font(Gilroy, 'Gilroy-Heavy', 1000, 'normal');
 
+@font-face {
+  font-family: 'FE Hero';
+  src: url('@fonts/FEHero-Regular.woff2') format('woff2'),
+        url('@fonts/FEHero-Regular.woff') format('woff');
+  font-style: normal; }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
 //=======================================================================//
 //========================= НАСТРОЙКИ АДАПТИВКИ =========================//
 //=======================================================================//
@@ -51,10 +59,10 @@ html {
   scroll-behavior: auto;
 }
 
-html,
+/* html,
 body {
-  // scrollbar-gutter: stable;
-}
+  scrollbar-gutter: stable;
+} */
 
 //============================== REM АДАПТИВКА (БЕЗ JS) ==============================//
 
@@ -101,11 +109,12 @@ body {
 }
 
 body {
+  margin: 0 auto;
   color: var(--text-color);
   line-height: $lineheight;
   font-family: $fontFamily;
   font-size: $fontSize;
-  background-color: var(--bg-color);
+  background-color: #0B0D0D;
   transition: background-color 0.3s ease, color 0.3s ease;
   //text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -127,6 +136,12 @@ textarea {
   font-family: $fontFamily;
   font-size: inherit;
   line-height: inherit;
+}
+
+ul, ul>li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 body.lock {
@@ -407,12 +422,12 @@ input[type='search']::-webkit-search-results-decoration {
     width: 100%;
   }
 }
-.select-box__list li {
-  // padding-bottom: 0.6rem;
-  // &:last-of-type {
-  //   padding-bottom: 0; q
-  // }
-}
+/* .select-box__list li {
+   padding-bottom: 0.6rem;
+   &:last-of-type {
+     padding-bottom: 0; q
+   }
+} */
 .select-box__option {
   display: block;
   padding: 0.5rem 1.4rem;
@@ -616,10 +631,10 @@ a {
 
 .container {
   // 1440px;
-  max-width: 152rem;
+  max-width: 128rem;
   margin: 0 auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  //padding-left: 4rem;
+  //padding-right: 4rem;
   @media (max-width: 767px) {
     padding-left: 15px;
     padding-right: 15px;
@@ -678,8 +693,8 @@ svg {
 
 .fancybox-custom,
 .fancybox-custom-video {
-  .fancybox-slide--image {
-  }
+  /* .fancybox-slide--image {
+  } */
   .fancybox-button {
     background: #fff;
     color: #1f2229;

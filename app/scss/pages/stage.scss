@@ -1,0 +1,152 @@
+.stage {
+    padding-top: 22rem;
+    padding-bottom: 17.5rem;
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__bg {
+        position: absolute;
+        top: 50%;
+        left: 27rem;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
+    }
+
+    &__bottom {
+        z-index: 5;
+        margin-top: 2rem;
+
+        &__list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+
+            &__item {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                &__info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    width: 100%;
+
+                    &__title {
+                        position: relative;
+                        font-family: FE Hero;
+                        font-weight: 400;
+                        font-style: Regular;
+                        font-size: 16rem;
+                        line-height: 100%;
+                        letter-spacing: 2%;
+                        text-transform: uppercase;
+                        color: #FFFFFF;
+                        margin-top: -2.5rem;
+
+                        & span {
+                            color: #0BE925;
+                        }
+
+                        & img {
+                            position: absolute;
+                            bottom: 83%;
+                            right: 94%;
+                            width: 9.7rem;
+                        }
+                    }
+
+                    &__desc {
+                        max-width: 61.5rem;
+                        width: 100%;
+                        font-family: Roboto Condensed;
+                        font-weight: 300;
+                        font-style: Light;
+                        font-size: 2.4rem;
+                        line-height: 120%;
+                        letter-spacing: 0%;
+                        text-align: right;
+                        color: #B1A16A; 
+                    }
+                }
+
+                &.box {
+                    box-shadow: 0rem 0rem .8rem .6rem #FFFFFF40;
+                    padding: 3.2rem;
+                    border-radius: 2.5rem;
+                    gap: 1.2rem;
+                    background: #0B0D0D;
+                }
+
+                &.light {
+                    box-shadow: none;
+                    background: #D3D7D3;
+
+                    & .stage__bottom__list__item__title {
+                        color: #000000;
+                    }
+
+                    & .stage__bottom__list__item__desc {
+                        color: #3B3B3B;
+                    }
+                }
+
+                &:nth-child(1) {
+                    grid-column: 2/4;
+                }
+
+                &:nth-child(2) {
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+
+                &:last-child {
+                    justify-content: flex-end;
+                    align-items: flex-end;
+                }
+
+                &__title {
+                    font-family: 'Roboto Condensed';
+                    font-weight: 500;
+                    font-style: Medium;
+                    font-size: 3.2rem;
+                    line-height: 120%;
+                    letter-spacing: 0%;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    text-align: left;
+                }
+
+                &__desc {
+                    font-family: 'Roboto Condensed';
+                    font-weight: 400;
+                    font-style: Regular;
+                    font-size: 1.6rem;
+                    line-height: 140%;
+                    letter-spacing: 0%;
+                    color: #6F6F6F;
+                    text-align: left;
+                }
+
+                &__count {
+                    align-self: flex-end;
+                    margin-top: auto;
+                }
+
+                &__link {
+                    max-width: 18.4rem;
+                    width: 100%;
+
+                    &__pic {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

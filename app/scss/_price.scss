@@ -1,5 +1,39 @@
 .price {
   color: #ffffff;
+  &__start {
+    display: flex;
+    justify-content: space-between;
+    &__span {
+      font-family: "Roboto Condensed";
+      font-weight: 300;
+      font-size: 2.4rem;
+      line-height: 120%;
+      letter-spacing: 0;
+      text-align: right;
+      color: #b1a16a;
+      display: flex;
+      width: 47%;
+      margin-left: 53%;
+      padding-bottom: 9.6rem;
+    }
+    &__h2 {
+      display: flex;
+      gap: 2.5rem;
+
+      &__el,
+      &__el__green {
+        font-size: 16rem;
+        font-family: "FE Hero";
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+      }
+      &__el__green {
+        color: #0be925;
+      }
+    }
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -16,6 +50,9 @@
         border-bottom: 1px solid #6f6f6f;
         width: 100%;
         bottom: 0;
+      }
+      &:last-child::after{
+        display: none;
       }
 
       &__name {
@@ -48,6 +85,7 @@
         font-size: 32px;
         line-height: 120%;
         text-transform: uppercase;
+        padding-top: 3rem;
       }
       &__price {
         color: #b1a16a;
@@ -59,6 +97,9 @@
           letter-spacing: 0.2rem;
           text-transform: uppercase;
           font-style: normal;
+          &__item {
+            color: #ffffff;
+          }
 
           &__span {
             font-family: "Roboto Condensed";
@@ -66,6 +107,28 @@
           }
         }
       }
+    }
+  }
+  &__end {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 7.6rem;
+    &__comment {
+      font-family: "Roboto Condensed";
+      font-weight: 300;
+      font-size: 2.4rem;
+      line-height: 120%;
+      letter-spacing: 0;
+      text-align: right;
+      color: #b1a16a;
+      max-width: 46.6rem;
+      &__el{
+        color: #ffffff;
+      }
+    }
+    &__img{
+      width: 5.1rem;
+      height: 3.9rem;
     }
   }
 }

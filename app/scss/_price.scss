@@ -1,0 +1,71 @@
+.price {
+  color: #ffffff;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 7.5rem;
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      &::after {
+        content: "";
+        opacity: 0.6;
+        position: absolute;
+        border-bottom: 1px solid #6f6f6f;
+        width: 100%;
+        bottom: 0;
+      }
+
+      &__name {
+        width: 45.3rem;
+        font-family: "FE Hero";
+        font-weight: 400;
+        font-size: 13rem;
+        line-height: 100%;
+        letter-spacing: 0.2rem;
+        text-transform: uppercase;
+        color: #ffffff;
+        justify-content: flex-end;
+        display: flex;
+      }
+      &__el {
+        width: 48rem;
+        font-family: Roboto Condensed;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 140%;
+        letter-spacing: 0;
+        color: #6f6f6f;
+      }
+      &__number {
+        width: 32px;
+        height: 38px;
+        font-family: "Roboto Condensed";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 120%;
+        text-transform: uppercase;
+      }
+      &__price {
+        color: #b1a16a;
+        &__el {
+          font-family: "FE Hero";
+          font-weight: 400;
+          font-size: 8rem;
+          line-height: 100%;
+          letter-spacing: 0.2rem;
+          text-transform: uppercase;
+          font-style: normal;
+
+          &__span {
+            font-family: "Roboto Condensed";
+            font-size: 2.4rem;
+          }
+        }
+      }
+    }
+  }
+}

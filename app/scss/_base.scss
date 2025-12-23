@@ -4,7 +4,7 @@
 
 $accent: #1a1a1a;
 $fontSize: 1.8rem;
-$textcolor: #1a1a1a;
+$textcolor: #FFFFFF;
 $lineheight: 1.2;
 $fontFamily: Gilroy, sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
@@ -48,7 +48,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
   /* Цвета для светлой темы (по умолчанию) */
   --bg-color: #ffffff;
-  --text-color: #1a1a1a;
+  --text-color: #FFFFFF;
   --cursor-color: #dedede;
   --cursor-big-fill: transparent;
   --cursor-small-fill: #dedede;
@@ -110,7 +110,7 @@ body {
 
 body {
   margin: 0 auto;
-  color: var(--text-color);
+  // color: var(--text-color);
   line-height: $lineheight;
   font-family: $fontFamily;
   font-size: $fontSize;

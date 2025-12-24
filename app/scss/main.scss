@@ -19,10 +19,11 @@
 
 // Подключение стилей отдельных страниц
 // При желании - можно разбить на страницы
-@import 'pages/*.';
+@import 'pages/*.scss';
 
-@import 'pages/focus.scss';
-@import 'pages/start.scss';
-@import 'pages/stage.scss';
-@import 'pages/team.scss';
-@import 'pages/benefits.scss';
+// @import 'pages/focus.scss';
+// @import 'pages/start.scss';
+// @import 'pages/stage.scss';
+// @import 'pages/team.scss';
+// @import 'pages/benefits.scss';
+// @import 'pages/advantages.scss';

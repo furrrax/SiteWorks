@@ -60,6 +60,9 @@
       border-radius: 2.5rem;
       padding: 3rem;
       font-family: "Roboto Condensed";
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .black__bg {
       background: #0b0d0d;
@@ -78,7 +81,6 @@
         color: #aeadad;
         font-size: 1.6rem;
         text-align: right;
-        margin-top: 6rem;
       }
     }
     .white__bg {
@@ -93,7 +95,6 @@
         color: #585858;
         font-size: 1.6rem;
         text-align: right;
-        margin-top: 6rem;
       }
     }
     .green__bg {
@@ -108,7 +109,6 @@
         color: #aeadad;
         font-size: 1.6rem;
         text-align: right;
-        margin-top: 6rem;
       }
     }
   }

@@ -16,7 +16,7 @@
   &__container::before {
     content: "";
     position: absolute;
-    top: -1px;
+    top: -0.1rem;
     left: 0;
     right: 0;
     height: 20%;
@@ -36,8 +36,8 @@
   &__wrap {
     width: 120.9rem;
     height: 64.4rem;
-    filter: drop-shadow(0px 70px 50px rgba(0, 0, 0, 0.5));
-    border-radius: 50px;
+    filter: drop-shadow(0rem 7rem 5rem rgba(0, 0, 0, 0.5));
+    border-radius: 5rem;
     background-image: url("@img/benefits/texture.png");
     background-position: center;
     background-repeat: no-repeat;
@@ -46,10 +46,10 @@
     display: flex;
     align-items: center;
 
-    box-shadow: inset 0 2px 0 0 rgba(48, 49, 51, 0.8),
-      inset 0 -2px 0 0 rgba(48, 49, 51, 0.8),
-      inset 2px 0 0 0 rgba(104, 162, 101, 0.8),
-      inset -2px 0 0 0 rgba(104, 162, 101, 0.8);
+    box-shadow: inset 0 .2rem 0 0 rgba(48, 49, 51, 0.8),
+      inset 0 -0.2rem 0 0 rgba(48, 49, 51, 0.8),
+      inset 0.2rem 0 0 0 rgba(104, 162, 101, 0.8),
+      inset -0.2rem 0 0 0 rgba(104, 162, 101, 0.8);
   }
   &__h2 {
     text-transform: uppercase;
@@ -74,7 +74,7 @@
     left: 0;
     right: 0;
     background: #0B0D0D;
-    border-radius: 2px;
+    border-radius: 0.2rem;
     z-index: -1;
   }
 }

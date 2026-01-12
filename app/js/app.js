@@ -110,3 +110,27 @@ function initScrollProgressBar() {
 }
 
 //Дальше наш код, можно импортами
+//popup
+$(document).ready(function() {
+  // Открытие
+  $('.open-popup-btn').click(function() {
+    $('#popup-overlay').addClass('active');
+    $('body').addClass('popup-open');
+  });
+  
+  // Закрытие
+  $('.popup__close, #popup-overlay').click(function(e) {
+    if ($(e.target).hasClass('popup__overlay') || $(e.target).hasClass('popup__close')) {
+      $('#popup-overlay').removeClass('active');
+      $('body').removeClass('popup-open');
+    }
+  });
+  
+  // Escape
+  $(document).keydown(function(e) {
+    if (e.key === 'Escape' && $('#popup-overlay').hasClass('active')) {
+      $('#popup-overlay').removeClass('active');
+      $('body').removeClass('popup-open');
+    }
+  });
+});

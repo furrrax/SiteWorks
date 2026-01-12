@@ -1,0 +1,22 @@
+<div class="popup__overlay" id="popup-overlay">
+  <div class="popup" id="popup">
+    <button class="popup__close">&times;</button>
+    <div class="popup__content">
+      <h2>Заказать проект</h2>
+      <form class="popup__form">
+        <input type="text" placeholder="Ваше имя" name="user-name" required />
+        <input type="email" placeholder="Ваш email" name="user-mail" required />
+        <input
+          type="tel"
+          placeholder="+7 (999) 123-45-67"
+          pattern="^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$"
+          title="Ваш номер телефона"
+          name="user-tel"
+          required
+        />
+        <textarea placeholder="Сообщение" name="user-mess" rows="4"></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+</div>

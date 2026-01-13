@@ -1,7 +1,24 @@
 <section class="order">
-    <div class="order__container container">
-        <div class="order__wrap">
-
-        </div>
+  <div class="order__container container">
+    <div class="order__wrap">
+      <h4 class="order__h4">хотите уникальный <span> проект</span>?</h4>
+      <p class="order__p">Напишите нам и мы ответим на любой вопрос.</p>
+      <form class="order__form">
+        <input type="text" placeholder="Имя" name="user-name" required />
+        <input type="email" placeholder="Email" name="user-mail" required />
+        <input
+          type="tel"
+          placeholder="+7"
+          pattern="^(\+7|8)[\s\-]?\(?\d{3}\)?[\s\-]?\d{3}[\s\-]?\d{2}[\s\-]?\d{2}$"
+          title="Ваш номер телефона"
+          name="user-tel"
+          required
+        />
+        <textarea placeholder="Комментарий" name="user-mess" rows="2"></textarea>
+        <img class="order__btn" src="@img/order/order-btn.svg" alt="зеленые овалы вокруг кнопки">
+        <button type="submit">Заказать проект</button>
+      </form>
+       
     </div>
+  </div>
 </section>

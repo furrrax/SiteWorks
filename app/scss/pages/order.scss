@@ -37,7 +37,7 @@
     background: #0b0d0d;
     box-shadow: 0rem 0.4rem 0.8rem 0.6rem rgba(11, 233, 37, 0.4);
     border-radius: 2.5rem;
-    padding: 4rem 9rem;
+    padding: 4rem 9rem 0;
   }
   &__h4 {
     text-transform: uppercase;
@@ -54,7 +54,7 @@
   &__p {
     color: #cccccc;
     font-family: "Roboto Condensed";
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     line-height: 120%;
     text-align: center;
   }
@@ -63,7 +63,7 @@
     flex-direction: column;
     gap: 1.6rem;
     max-width: 59.5rem;
-    margin: 5rem auto 0;
+    margin: 2.4rem auto 0;
     position: relative;
     input,
     textarea {
@@ -73,9 +73,9 @@
       border-radius: 0.8rem;
       background: none;
       font-family: "Roboto Condensed";
-      font-size: 2.4rem;
+      font-size: 1.8rem;
       line-height: 120%;
-      color: #dddddd;
+      color: #DDDDDD;
     }
     button {
       max-width: 16.5rem;

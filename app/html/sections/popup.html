@@ -2,7 +2,7 @@
   <div class="popup" id="popup">
     <button class="popup__close">&times;</button>
     <div class="popup__content">
-      <h2>Заказать проект</h2>
+      <h2>Заказать <span>проект</span></h2>
       <form class="popup__form">
         <input type="text" placeholder="Ваше имя" name="user-name" required />
         <input type="email" placeholder="Ваш email" name="user-mail" required />
@@ -15,6 +15,11 @@
           required
         />
         <textarea placeholder="Сообщение" name="user-mess" rows="4"></textarea>
+        <img
+          class="popup__btn"
+          src="@img/order/order-btn.svg"
+          alt="зеленые овалы вокруг кнопки"
+        />
         <button type="submit">Отправить</button>
       </form>
     </div>

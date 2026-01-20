@@ -18,11 +18,10 @@
   opacity: 1;
 }
 
-/* Сам попап */
 .popup {
   background-color: #0b0d0d;
   border-radius: 1.2rem;
-  padding: 6rem;
+  padding: 5rem 6rem 1rem 6rem;
   width: 100%;
   max-width: 56rem;
   overflow-y: auto;
@@ -59,18 +58,17 @@
   z-index: 1;
 }
 
-/* Контент попапа */
-.popup__content {
-  margin-top: 1rem;
-}
-
 .popup__content h2 {
-  font-family: "Roboto Condensed";
-  margin-top: 0;
-  margin-bottom: 2.5rem;
-  color: #f0f0f0;
-  font-size: 3rem;
-  font-weight: 600;
+  text-transform: uppercase;
+  font-family: "FE Hero";
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  & span {
+    color: #0be925;
+  }
 }
 
 .popup__content p {
@@ -91,13 +89,13 @@
 .popup__form textarea {
   padding: 1.2rem 1.5rem;
   border: 0.1rem solid #ddd;
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
   font-size: 1.6rem;
   font-family: inherit;
   resize: vertical;
   background-color: rgba(255, 255, 255, 0.05);
   color: #f0f0f0;
-  border-color: #333;
+  border-color: #0be925;
 }
 
 .popup__form input:focus,
@@ -112,23 +110,22 @@
   color: #888;
 }
 
-.popup__form button {
-  font-family: "Roboto";
-  padding: 1.2rem 2rem;
-  background-color: #0b0d0d;
-  color: white;
-  border: 0.1rem solid #0be925;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  font-size: 1.6rem;
-  font-weight: 600;
-  transition: all 0.2s;
-  margin-top: 1rem;
+.popup__btn {
+  max-width: 25.9rem;
+  margin: 0 auto;
+  margin-top: 3rem;
 }
-
-.popup__form button:hover {
-  background-color: #0be925;
-  color: #0b0d0d;
+.popup__form button {
+  max-width: 16.5rem;
+  background: none;
+  border: none;
+  color: #ffffff;
+  margin: 0 auto;
+  position: relative;
+  bottom: 8rem;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  line-height: 120%;
 }
 
 /* Блокировка скролла */
@@ -136,19 +133,18 @@ body.popup-open {
   overflow: hidden;
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .popup {
     padding: 4rem 2rem;
     margin: 1rem;
   }
-  
+
   .popup__close {
     top: 1.5rem;
     right: 1.5rem;
     font-size: 4rem;
   }
-  
+
   .popup__content h2 {
     font-size: 2.4rem;
   }

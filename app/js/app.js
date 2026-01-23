@@ -1,24 +1,24 @@
 // Импортируем константы
-import { device_width, gsap_ease } from '@utils/constants.js';
+import { device_width, gsap_ease } from "@utils/constants.js";
 
 // Импортируем анимацию wrapper
-import '@utils/wrapperFade.js';
+import "@utils/wrapperFade.js";
 
 // Импортируем функцию анимации текста
-import { animateText } from '@utils/splitAnimationText.js';
+import { animateText } from "@utils/splitAnimationText.js";
 
 // Импортируем курсор
-import { initCursor } from '@utils/cursor.js';
+import { initCursor } from "@utils/cursor.js";
 
 // Импортируем модуль переключения тем
 import {
   toggleThemeByTime,
   initThemeInterval,
   initThemeToggleButton,
-} from '@utils/themeToggle.js';
+} from "@utils/themeToggle.js";
 
 // Инициализируем приложение при загрузке DOM
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   // Инициализируем переключение темы
   toggleThemeByTime();
   initThemeInterval();
@@ -36,36 +36,36 @@ document.addEventListener('DOMContentLoaded', () => {
  * Инициализация домашней страницы
  */
 function initHomePage() {
-  const home = document.querySelector('.home');
+  const home = document.querySelector(".home");
   if (!home) return;
 
   // Анимируем заголовок
-  animateText('.home__name');
+  animateText(".home__name");
 
   // Анимируем дату с задержкой
-  setTimeout(() => animateText('.home__2112'), 150);
+  setTimeout(() => animateText(".home__2112"), 150);
 
-  gsap.set('.home__link', {
-    y: '1rem',
+  gsap.set(".home__link", {
+    y: "1rem",
     opacity: 0,
   });
 
-  gsap.set('.home__link-rem', {
-    y: '1rem',
+  gsap.set(".home__link-rem", {
+    y: "1rem",
     opacity: 0,
   });
 
   // Анимируем ссылку
-  gsap.to('.home__link', {
-    y: '0',
+  gsap.to(".home__link", {
+    y: "0",
     opacity: 1,
     duration: 0.2,
     ease: gsap_ease,
     delay: 0.4,
   });
 
-  gsap.to('.home__link-rem', {
-    y: '0',
+  gsap.to(".home__link-rem", {
+    y: "0",
     opacity: 1,
     duration: 0.1,
     ease: gsap_ease,
@@ -77,7 +77,7 @@ function initHomePage() {
  * Инициализация страницы about
  */
 function initAboutPage() {
-  const about = document.querySelector('.about');
+  const about = document.querySelector(".about");
   if (!about) return;
 
   // Прогресс-бар скролла
@@ -88,7 +88,7 @@ function initAboutPage() {
  * Инициализация прогресс-бара скролла
  */
 function initScrollProgressBar() {
-  const scrollProgress = document.getElementById('scrollProgress');
+  const scrollProgress = document.getElementById("scrollProgress");
   if (!scrollProgress) return;
 
   // Запускаем анимацию прогресс-бара
@@ -102,7 +102,7 @@ function initScrollProgressBar() {
     const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
     // Обновляем ширину прогресс-бара
-    scrollProgress.style.width = scrollPercentage + '%';
+    scrollProgress.style.width = scrollPercentage + "%";
 
     // Продолжаем анимацию
     requestAnimationFrame(updateProgressBar);
@@ -111,41 +111,52 @@ function initScrollProgressBar() {
 
 //Дальше наш код, можно импортами
 //popup
-$(document).ready(function() {
+$(document).ready(function () {
   // Открытие
-  $('.open-popup-btn').click(function() {
-    $('#popup-overlay').addClass('active');
-    $('body').addClass('popup-open');
+  $(".open-popup-btn").click(function () {
+    $("#popup-overlay").addClass("active");
+    $("body").addClass("popup-open");
   });
-  
+
   // Закрытие
-  $('.popup__close, #popup-overlay').click(function(e) {
-    if ($(e.target).hasClass('popup__overlay') || $(e.target).hasClass('popup__close')) {
-      $('#popup-overlay').removeClass('active');
-      $('body').removeClass('popup-open');
+  $(".popup__close, #popup-overlay").click(function (e) {
+    if (
+      $(e.target).hasClass("popup__overlay") ||
+      $(e.target).hasClass("popup__close")
+    ) {
+      $("#popup-overlay").removeClass("active");
+      $("body").removeClass("popup-open");
     }
   });
-  
+
   // Escape
-  $(document).keydown(function(e) {
-    if (e.key === 'Escape' && $('#popup-overlay').hasClass('active')) {
-      $('#popup-overlay').removeClass('active');
-      $('body').removeClass('popup-open');
+  $(document).keydown(function (e) {
+    if (e.key === "Escape" && $("#popup-overlay").hasClass("active")) {
+      $("#popup-overlay").removeClass("active");
+      $("body").removeClass("popup-open");
     }
   });
 });
 
-
 // Карусель case
-
+import { Navigation } from 'swiper/modules';
 const swiper = new Swiper(".case-swiper", {
-  slidesPerView: 3,
+  modules: [Navigation],
+  slidesPerView: 3, //кол-во видимых слайдов
   loop: true,
-  initialSlide: 4,
+  loopedSlides: 2,
+  initialSlide: 0,
   spaceBetween: 20,
 
   navigation: {
-    prevEl: ".swiper-button-prev.left",
-    nextEl: ".swiper-button-next.right",
+    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-next",
+  },
+
+    on: {
+    init: function() {
+      // Устанавливаем начальную позицию без анимации
+      this.slideTo(1, 0, false); // Без анимации (третий параметр false)
+    },
   },
 });

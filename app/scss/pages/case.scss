@@ -81,10 +81,10 @@
 }
 
 /* Импорт базовых стилей Swiper в ваш основной CSS файл */
-@import 'swiper/css';
-@import 'swiper/css/navigation';
-@import 'swiper/css/pagination';
-@import 'swiper/css/effect-fade'; /* для эффектов */
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+@import "swiper/css/effect-fade"; /* для эффектов */
 
 /* Контейнер для карусели */
 .case-swiper {
@@ -92,11 +92,11 @@
   height: 40.7rem;
   padding-top: 7rem;
   overflow: visible !important; /* Важно! */
-  margin: 0 32.5rem !important; 
+  margin: 0 32.5rem !important;
 }
-.swiper-wrapper{
-  gap: 4rem;
-}
+// .swiper-wrapper{
+//   gap: 4rem;
+// }
 /* Стили для слайда */
 .case-swiper-list-item {
   display: flex;
@@ -121,6 +121,10 @@
 
 .case-card:hover {
   transform: translateY(-1rem);
+}
+
+.case-swiper-list-item:nth-child(odd) {
+  transform: translateY(-14rem);
 }
 
 // .case-card__img {
@@ -150,26 +154,53 @@
 }
 
 /* Кастомные стили для навигации Swiper */
-// .swiper-button-next,
-// .swiper-button-prev {
-//   color: #0be925 !important;
-//   width: 6rem !important;
-//   height: 6rem !important;
-//   background: rgba(11, 13, 13, 0.7);
-//   border-radius: 50%;
-// }
+.swiper-navigation {
+  position: relative;
+  max-width: 16.8rem;
+  width: 100%;
+  left: 8rem;
+  bottom: 6rem;
+  display: flex;
+  gap: 8rem; /* Расстояние 6rem между кнопками */
+  justify-content: center; /* Центрируем кнопки внутри */
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #ffffff;
+  width: 8rem !important;
+  height: 8rem !important;
+  background: #0be925;
+  border-radius: 50%;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #0be925;
+  background: #ffffff;
+  border: 3px solid #0be925;
+}
+
+.swiper-navigation-icon {
+  max-width: 1.6rem;
+  max-height: 3rem;
+}
 
 // .swiper-button-next:after,
 // .swiper-button-prev:after {
 //   font-size: 2rem !important;
 // }
 
-// .swiper-pagination-bullet {
+// .swiper-pagination {
 //   background: white !important;
 //   opacity: 0.5 !important;
+//   width: 3rem;
+//   height: 3rem;
 // }
 
-// .swiper-pagination-bullet-active {
+// .swiper-pagination-active {
 //   background: #0be925 !important;
 //   opacity: 1 !important;
 // }
@@ -196,11 +227,11 @@
 
 /* Номер */
 .slide-number .number {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   font-size: 3.2rem;
   font-weight: 500;
   line-height: 120%;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 1rem;
 }

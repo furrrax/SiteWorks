@@ -134,3 +134,18 @@ $(document).ready(function() {
     }
   });
 });
+
+
+// Карусель case
+
+const swiper = new Swiper(".case-swiper", {
+  slidesPerView: 3,
+  loop: true,
+  initialSlide: 4,
+  spaceBetween: 20,
+
+  navigation: {
+    prevEl: ".swiper-button-prev.left",
+    nextEl: ".swiper-button-next.right",
+  },
+});

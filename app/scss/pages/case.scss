@@ -98,7 +98,7 @@
   gap: 4rem;
 }
 /* Стили для слайда */
-.case-slide {
+.case-swiper-list-item {
   display: flex;
   width: 41.3rem;
   // gap: 4rem;
@@ -150,29 +150,29 @@
 }
 
 /* Кастомные стили для навигации Swiper */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #0be925 !important;
-  width: 6rem !important;
-  height: 6rem !important;
-  background: rgba(11, 13, 13, 0.7);
-  border-radius: 50%;
-}
+// .swiper-button-next,
+// .swiper-button-prev {
+//   color: #0be925 !important;
+//   width: 6rem !important;
+//   height: 6rem !important;
+//   background: rgba(11, 13, 13, 0.7);
+//   border-radius: 50%;
+// }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 2rem !important;
-}
+// .swiper-button-next:after,
+// .swiper-button-prev:after {
+//   font-size: 2rem !important;
+// }
 
-.swiper-pagination-bullet {
-  background: white !important;
-  opacity: 0.5 !important;
-}
+// .swiper-pagination-bullet {
+//   background: white !important;
+//   opacity: 0.5 !important;
+// }
 
-.swiper-pagination-bullet-active {
-  background: #0be925 !important;
-  opacity: 1 !important;
-}
+// .swiper-pagination-bullet-active {
+//   background: #0be925 !important;
+//   opacity: 1 !important;
+// }
 
 /* Нумерация под слайдом */
 .slide-number {

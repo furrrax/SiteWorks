@@ -20,9 +20,9 @@
         <button type="submit">Обсудить проект</button>
       </div>
       <div class="swiper case-swiper">
-        <div class="swiper-wrapper">
+        <ul class="case-swiper-list swiper-wrapper">
           <!-- Слайд 1 -->
-          <div class="swiper-slide case-slide">
+          <li class="swiper-slide case-swiper-list-item">
             <div class="case-card">
               <!-- <img
                 src="@img/case/project1.jpg"
@@ -38,10 +38,10 @@
               <span class="number">01</span>
               <div class="number-line"></div>
             </div>
-          </div>
+          </li>
 
           <!-- Слайд 2 -->
-          <div class="swiper-slide case-slide">
+          <li class="swiper-slide case-swiper-list-item">
             <div class="case-card">
               <!-- <img
                 src="@img/case/project2.jpg"
@@ -57,9 +57,9 @@
               <span class="number">02</span>
               <div class="number-line"></div>
             </div>
-          </div>
+          </li>
           <!-- Слайд 3 -->
-          <div class="swiper-slide case-slide">
+          <li class="swiper-slide case-swiper-list-item">
             <div class="case-card">
               <!-- <img
                 src="@img/case/project2.jpg"
@@ -75,9 +75,9 @@
               <span class="number">03</span>
               <div class="number-line"></div>
             </div>
-          </div>
+          </li>
           <!-- Слайд 4 -->
-          <div class="swiper-slide case-slide">
+          <li class="swiper-slide case-swiper-list-item">
             <div class="case-card">
               <!-- <img
                 src="@img/case/project2.jpg"
@@ -93,16 +93,20 @@
               <span class="number">04</span>
               <div class="number-line"></div>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <!-- Пагинация (точки) -->
-        <div class="swiper-pagination"></div>
+        <!-- <div class="swiper-pagination"></div> -->
 
         <!-- Кнопки навигации -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
+      <button type="button" class="swiper-button-prev left">
+        <img src="@img/case/prev-btn.svg" alt="стрелка вправо" />
+      </button>
+      <button type="button" class="swiper-button-next right">
+        <img src="@img/case/next-btn.svg" alt="стрелка вправо" />
+      </button>
     </div>
   </div>
 </section>

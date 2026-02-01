@@ -155,8 +155,8 @@ const swiper = new Swiper(".case-swiper", {
 
     on: {
     init: function() {
-      // Устанавливаем начальную позицию без анимации
-      this.slideTo(1, 0, false); // Без анимации (третий параметр false)
+      // Устанавливаем начальную позицию 
+      this.slideTo(1, 0);
     },
   },
-});
+})

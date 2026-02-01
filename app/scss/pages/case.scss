@@ -91,20 +91,14 @@
   width: 100%;
   height: 40.7rem;
   padding-top: 7rem;
-  overflow: visible !important; /* Важно! */
-  margin: 0 32.5rem !important;
+  overflow: visible !important; 
+  margin: 0 32rem !important;
+
 }
-// .swiper-wrapper{
-//   gap: 4rem;
-// }
 /* Стили для слайда */
 .case-swiper-list-item {
   display: flex;
   width: 41.3rem;
-  // gap: 4rem;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 2rem;
 }
 
 /* Карточка проекта */
@@ -114,7 +108,6 @@
   border-radius: 2.5rem;
   overflow: hidden;
   width: 100%;
-  // height: 40.7rem;
   max-width: 41.3rem;
   transition: transform 0.3s ease;
 }
@@ -127,11 +120,7 @@
   transform: translateY(-14rem);
 }
 
-// .case-card__img {
-//   width: 100%;
-//   height: 25rem;
-//   object-fit: cover;
-// }
+
 
 .case-card__content {
   padding: 2rem;
@@ -210,20 +199,12 @@
   position: absolute;
   bottom: -7rem;
   right: 18.5rem;
-  // left: 10rem;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // margin-top: 2rem;
-  // opacity: 0.3;
   transition: opacity 0.3s ease;
 }
-
-/* Активный слайд - номер виден хорошо */
-// .swiper-slide-active .slide-number {
-//   opacity: 1;
-// }
 
 /* Номер */
 .slide-number .number {
@@ -235,3 +216,31 @@
   color: #ffffff;
   margin-bottom: 1rem;
 }
+
+// .case-swiper {
+//   width: 100%;
+//   height: 40.7rem;
+//   padding-top: 7rem;
+//   overflow: visible !important;
+//   margin: 0 auto !important; /* Убираем жесткие margin */
+//   max-width: calc(100% - 10rem); /* Даем место для выпирающих слайдов */
+// }
+
+// /* Увеличиваем ширину слайда для slidesPerView: 2.5 */
+// .case-swiper-list-item {
+//   display: flex;
+//   width: 41.3rem !important; /* !important для приоритета */
+//   transition: transform 0.3s ease;
+// }
+
+// /* Для нечетных слайдов - подъем */
+// .case-swiper-list-item[data-number="01"] .case-card,
+// .case-swiper-list-item[data-number="03"] .case-card {
+//   transform: translateY(-14rem);
+// }
+
+// /* Для четных - обычная позиция */
+// .case-swiper-list-item[data-number="02"] .case-card,
+// .case-swiper-list-item[data-number="04"] .case-card {
+//   transform: translateY(0);
+// }

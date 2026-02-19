@@ -107,13 +107,15 @@
   }
   &__order {
     position: relative;
-    left: 83rem;
+    left: 38rem;
     bottom: 23rem;
+    display: flex;
+    justify-content: center;
 
     &__img {
       max-width: 29rem;
     }
-    &__href {
+    &__text {
       font-family: "Roboto Condensed";
       font-weight: 400;
       letter-spacing: 0.05rem;
@@ -123,26 +125,7 @@
       border-bottom: 0.3rem solid #ffffff;
       position: absolute;
       bottom: 4.5rem;
-      transform: translateX(-130%);
-      padding: 1rem;
+      right: 50rem;
     }
   }
-}
-@keyframes pulse {
-  0% {
-    transform: translateY(0) scale(1);
-    // box-shadow: 0 0 0 rgba(222, 128, 103, 0.4);
-  }
-  50% {
-    transform: translateY(0) scale(1.05);
-    // box-shadow: 0 5px 15px rgba(222, 128, 103, 0.6);
-  }
-  100% {
-    transform: translateY(0) scale(1);
-    // box-shadow: 0 0 0 rgba(222, 128, 103, 0.4);
-  }
-}
-.heart_btn {
-  animation: pulse 2s infinite 1.7s forwards;
-// box-shadow: none !important;
 }

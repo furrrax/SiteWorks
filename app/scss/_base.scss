@@ -4,7 +4,7 @@
 
 $accent: #1a1a1a;
 $fontSize: 1.8rem;
-$textcolor: #FFFFFF;
+$textcolor: #ffffff;
 $lineheight: 1.2;
 $fontFamily: Gilroy, sans-serif;
 $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
@@ -17,23 +17,24 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 // @include fontTTF(Gilroy, 'GilroyLight', 300, 'normal');
 
 // woff2
-@include font(Gilroy, 'Gilroy-Light', 300, 'normal');
-@include font(Gilroy, 'Gilroy-Regular', 400, 'normal');
-@include font(Gilroy, 'Gilroy-Medium', 500, 'normal');
-@include font(Gilroy, 'Gilroy-Semibold', 600, 'normal');
-@include font(Gilroy, 'Gilroy-Bold', 700, 'normal');
-@include font(Gilroy, 'Gilroy-Extrabold', 800, 'normal');
-@include font(Gilroy, 'Gilroy-Black', 900, 'normal');
-@include font(Gilroy, 'Gilroy-Heavy', 1000, 'normal');
+@include font(Gilroy, "Gilroy-Light", 300, "normal");
+@include font(Gilroy, "Gilroy-Regular", 400, "normal");
+@include font(Gilroy, "Gilroy-Medium", 500, "normal");
+@include font(Gilroy, "Gilroy-Semibold", 600, "normal");
+@include font(Gilroy, "Gilroy-Bold", 700, "normal");
+@include font(Gilroy, "Gilroy-Extrabold", 800, "normal");
+@include font(Gilroy, "Gilroy-Black", 900, "normal");
+@include font(Gilroy, "Gilroy-Heavy", 1000, "normal");
 
 @font-face {
-  font-family: 'FE Hero';
-  src: url('@fonts/FEHero-Regular.woff2') format('woff2'),
-        url('@fonts/FEHero-Regular.woff') format('woff');
-  font-style: normal; }
+  font-family: "FE Hero";
+  src: url("@fonts/FEHero-Regular.woff2") format("woff2"),
+    url("@fonts/FEHero-Regular.woff") format("woff");
+  font-style: normal;
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 //=======================================================================//
 //========================= НАСТРОЙКИ АДАПТИВКИ =========================//
 //=======================================================================//
@@ -48,7 +49,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
   /* Цвета для светлой темы (по умолчанию) */
   --bg-color: #ffffff;
-  --text-color: #FFFFFF;
+  --text-color: #ffffff;
   --cursor-color: #dedede;
   --cursor-big-fill: transparent;
   --cursor-small-fill: #dedede;
@@ -114,7 +115,7 @@ body {
   line-height: $lineheight;
   font-family: $fontFamily;
   font-size: $fontSize;
-  background-color: #0B0D0D;
+  background-color: #0b0d0d;
   transition: background-color 0.3s ease, color 0.3s ease;
   //text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -138,7 +139,8 @@ textarea {
   line-height: inherit;
 }
 
-ul, ul>li {
+ul,
+ul > li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -210,7 +212,12 @@ button:focus {
   outline: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
 }
@@ -294,29 +301,29 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* clears the 'X' from Internet Explorer */
-input[type='search']::-ms-clear {
+input[type="search"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-input[type='search']::-ms-reveal {
+input[type="search"]::-ms-reveal {
   display: none;
   width: 0;
   height: 0;
 }
 
 /* clears the 'X' from Chrome */
-input[type='search']::-webkit-search-decoration,
-input[type='search']::-webkit-search-cancel-button,
-input[type='search']::-webkit-search-results-button,
-input[type='search']::-webkit-search-results-decoration {
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
 .input,
 .textarea {
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   color: #1f2229;
@@ -371,7 +378,7 @@ input[type='search']::-webkit-search-results-decoration {
   border: 1px solid #bababa;
   border-radius: 0.6rem;
   color: #fff;
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-size: 1.4rem;
   line-height: 1;
   font-weight: 400;
@@ -503,7 +510,7 @@ input[type='search']::-webkit-search-results-decoration {
   display: inline-block;
   line-height: 1;
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 100%;
     height: 1px;
@@ -539,7 +546,7 @@ input[type='search']::-webkit-search-results-decoration {
 
 .control_indicator:after {
   box-sizing: unset;
-  content: '';
+  content: "";
   position: absolute;
   display: none;
 }
@@ -563,7 +570,7 @@ input[type='search']::-webkit-search-results-decoration {
     color: $accent;
   }
   &::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 0.1rem;
     position: absolute;
@@ -647,7 +654,7 @@ a {
 }
 
 .btn {
-  font-family: 'Gilroy', sans-serif;
+  font-family: "Gilroy", sans-serif;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.2;
@@ -1102,7 +1109,7 @@ svg {
 // Стили для чувствительных картинок (IBG)
 // Сниппет (HTML): ibg (div с изображением и классами)
 // Сниппет (HTML): ibga (a с изображением и классами)
-[class*='-ibg'] {
+[class*="-ibg"] {
   position: relative;
   img {
     position: absolute;
@@ -1113,7 +1120,7 @@ svg {
     object-fit: cover;
   }
 }
-[class*='-ibg_contain'] {
+[class*="-ibg_contain"] {
   img {
     object-fit: contain;
   }
@@ -1264,4 +1271,32 @@ svg {
 
 .hoverable-area {
   cursor: none;
+}
+
+//НАШИ СТИЛИ
+
+
+//анимация пульсации
+@keyframes pulse {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(0) scale(1.05);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+//пульсирующая кнопка
+.heart_btn {
+  animation: pulse 1s infinite 1s;
+  cursor: pointer;
+}
+.heart_btn:hover{
+  animation: none;
+  transform: scale(1.05);
+}
+.heart_btn:not(:hover) {
+  animation: pulse 1s infinite 1s;
 }

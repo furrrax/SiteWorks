@@ -139,24 +139,45 @@ $(document).ready(function () {
 });
 
 // Карусель case
-import { Navigation } from 'swiper/modules';
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
 const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
-  slidesPerView: 3, //кол-во видимых слайдов
   loop: true,
-  loopedSlides: 2,
+  loopedSlides: 5,
+  slidesPerView: 3,
+  spaceBetween: 38,
   initialSlide: 0,
-  spaceBetween: 20,
-
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
+  // on: {
+  //   slideChangeTransitionStart: function () {
+  //     this.slides.forEach((slide) => {
+  //       slide.classList.toggle("slide-upp");
+  //     });
+      
+  //   },
 
-    on: {
-    init: function() {
-      // Устанавливаем начальную позицию без анимации
-      this.slideTo(1, 0, false); // Без анимации (третий параметр false)
-    },
+  //   // navigationNext: function () {
+  //   //   console.log("Кликнули вперед — меняем высоту");
+  //   // },
+  //   // navigationPrev: function () {
+  //   //   console.log("Кликнули назад — меняем высоту");
+  //   // },
+  // },
+  on: {
+  slideChangeTransitionStart: function () {
+    this.slides.forEach((slide, index) => {
+      // Пример: поднимаем слайды с чётным реальным индексом
+      if (index % 2 == 0) {
+        slide.classList.add('slide-upp');
+      } else {
+        slide.classList.remove('slide-upp');
+      }
+    });
   },
+}
 });

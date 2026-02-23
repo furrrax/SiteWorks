@@ -142,42 +142,21 @@ $(document).ready(function () {
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
 const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
   loop: true,
-  loopedSlides: 5,
-  slidesPerView: 3,
-  spaceBetween: 38,
-  initialSlide: 0,
+  loopedSlides: 5,  //кол-во слайдов
+  slidesPerView: 'auto', //видимые слайды
+  spaceBetween: 40, //отступы между слайдами
+  initialSlide: 1, 
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
-  // on: {
-  //   slideChangeTransitionStart: function () {
-  //     this.slides.forEach((slide) => {
-  //       slide.classList.toggle("slide-upp");
-  //     });
-      
-  //   },
-
-  //   // navigationNext: function () {
-  //   //   console.log("Кликнули вперед — меняем высоту");
-  //   // },
-  //   // navigationPrev: function () {
-  //   //   console.log("Кликнули назад — меняем высоту");
-  //   // },
-  // },
-  on: {
-  slideChangeTransitionStart: function () {
-    this.slides.forEach((slide, index) => {
-      // Пример: поднимаем слайды с чётным реальным индексом
-      if (index % 2 == 0) {
-        slide.classList.add('slide-upp');
-      } else {
-        slide.classList.remove('slide-upp');
-      }
-    });
-  },
-}
 });
+
+
+

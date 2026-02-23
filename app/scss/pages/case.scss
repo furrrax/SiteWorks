@@ -100,11 +100,16 @@
 /* Стили для слайда */
 .case-swiper-list-item {
   display: flex;
-  width: 41.3rem;
-  // gap: 4rem;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 2rem;
+  width: 41.3rem !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  transform: translateY(0);
+  position: relative;
+}
+.case-swiper-list-item.swiper-slide-prev {
+  transform: translateY(-16.5rem) !important;
+}
+.case-swiper-list-item.swiper-slide-next {
+  transform: translateY(-16.5rem) !important;
 }
 /* Карточка проекта */
 .case-card {

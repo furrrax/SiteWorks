@@ -8,7 +8,8 @@
         </div>
         <span class="case__start__span"
           >Каждый проект выполняется с учетом индивидуальных потребностей
-          клиента.</span>
+          клиента.</span
+        >
       </div>
       <div class="case__btn heart_btn">
         <img
@@ -20,8 +21,8 @@
       </div>
       <div class="swiper case-swiper">
         <ul class="case-swiper-list swiper-wrapper">
-          <!-- Слайд 4 -->
-          <li class="swiper-slide case-swiper-list-item">
+          <!-- Слайд 5 -->
+          <li class="swiper-slide case-swiper-list-item" data-slide-number="05">
             <div class="case-card">
               <img
                 src="@img/case/project3.png"
@@ -38,12 +39,14 @@
               </div>
             </div>
             <div class="slide-number">
-              <span class="number">04</span>
-              <div class="number-line"></div>
+              <span class="number">05</span>
             </div>
           </li>
           <!-- Слайд 1 -->
-          <li class="swiper-slide case-swiper-list-item">
+          <li
+            class="swiper-slide case-swiper-list-item swiper-slide-active"
+            data-slide-number="01"
+          >
             <div class="case-card">
               <img
                 src="@img/case/project1.png"
@@ -61,11 +64,13 @@
             </div>
             <div class="slide-number">
               <span class="number">01</span>
-              <div class="number-line"></div>
             </div>
           </li>
           <!-- Слайд 2 -->
-          <li class="swiper-slide case-swiper-list-item">
+          <li
+            class="swiper-slide case-swiper-list-item center"
+            data-slide-number="02"
+          >
             <div class="case-card">
               <img
                 src="@img/case/project2.png"
@@ -83,7 +88,6 @@
             </div>
             <div class="slide-number">
               <span class="number">02</span>
-              <div class="number-line"></div>
             </div>
           </li>
           <!-- Слайд 3 -->
@@ -105,19 +109,33 @@
             </div>
             <div class="slide-number">
               <span class="number">03</span>
-              <div class="number-line"></div>
+            </div>
+          </li>
+          <!-- Слайд 4 -->
+          <li class="swiper-slide case-swiper-list-item" data-slide-number="04">
+            <div class="case-card">
+              <img
+                src="@img/case/project4.png"
+                alt="Проект 2"
+                class="case-card__img"
+              />
+              <div class="case-card__content">
+                <h3 class="case-card__title">Многостраничник для поставок</h3>
+                <a href="https://www.tranzitcity.ru/" class="case-card__link"
+                  >Смотреть</a
+                >
+              </div>
+            </div>
+            <div class="slide-number">
+              <span class="number">04</span>
             </div>
           </li>
         </ul>
         <!-- Кнопки навигации -->
       </div>
       <div class="swiper-navigation">
-        <button type="button" class="swiper-button-prev"> 
-          <!-- <img src="@img/case/prev-btn.svg" alt="стрелка вправо" /> -->
-        </button>
-        <button type="button" class="swiper-button-next"> 
-          <!-- <img src="@img/case/next-btn.svg" alt="стрелка вправо" /> -->
-        </button>
+        <button type="button" class="swiper-button-prev"></button>
+        <button type="button" class="swiper-button-next"></button>
       </div>
     </div>
   </div>

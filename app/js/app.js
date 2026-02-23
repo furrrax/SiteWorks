@@ -142,6 +142,9 @@ $(document).ready(function () {
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
 const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
   loop: true,

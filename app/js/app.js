@@ -139,24 +139,21 @@ $(document).ready(function () {
 });
 
 // Карусель case
-import { Navigation } from 'swiper/modules';
+import Swiper from "swiper";
+import { Navigation } from "swiper/modules";
+
 const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
-  slidesPerView: 3, //кол-во видимых слайдов
   loop: true,
-  loopedSlides: 2,
-  initialSlide: 0,
-  spaceBetween: 20,
-
+  loopedSlides: 5,  //кол-во слайдов
+  slidesPerView: 'auto', //видимые слайды
+  spaceBetween: 40, //отступы между слайдами
+  initialSlide: 1, 
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
-
-    on: {
-    init: function() {
-      // Устанавливаем начальную позицию без анимации
-      this.slideTo(1, 0, false); // Без анимации (третий параметр false)
-    },
-  },
 });
+
+
+

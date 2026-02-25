@@ -60,10 +60,7 @@
   }
   &__order {
     margin-top: 5.2rem;
-    margin-left: -35.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-left: 31rem;
     &__img {
       max-width: 25.55rem;
       margin-top: 3rem;
@@ -82,7 +79,6 @@
   }
 }
 
-/* Импорт базовых стилей Swiper в ваш основной CSS файл */
 @import "swiper/css";
 @import "swiper/css/navigation";
 @import "swiper/css/pagination";
@@ -93,66 +89,85 @@
   width: 100%;
   height: 40.7rem;
   padding-top: 7rem;
-  overflow: visible !important; /* Важно! */
-  margin: 0 32.5rem !important;
+  overflow: visible !important;
+  padding-left: 24rem;
 }
-// .swiper-wrapper{
-//   gap: 4rem;
-// }
+
 /* Стили для слайда */
 .case-swiper-list-item {
   display: flex;
-  width: 41.3rem;
-  // gap: 4rem;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 2rem;
+  width: 41.3rem !important;
+  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  transform: translateY(0);
+  position: relative;
+}
+
+.case-swiper-list-item.swiper-slide-prev {
+  transform: translateY(-16.5rem) !important;
+}
+.case-swiper-list-item.swiper-slide-next {
+  transform: translateY(-16.5rem) !important;
 }
 
 /* Карточка проекта */
 .case-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(1rem);
-  border-radius: 2.5rem;
+  position: relative;
   overflow: hidden;
   width: 100%;
-  // height: 40.7rem;
+  height: 40.7rem;
   max-width: 41.3rem;
   transition: transform 0.3s ease;
+  box-shadow: 0px 0px 8px 6px rgba(255, 255, 255, 0.4);
+  border-radius: 2.5rem;
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 2.5rem;
+    max-width: 41.3rem;
+  }
 }
 
 .case-card:hover {
   transform: translateY(-1rem);
 }
 
-.case-swiper-list-item:nth-child(odd) {
-  transform: translateY(-14rem);
-}
-
-// .case-card__img {
-//   width: 100%;
-//   height: 25rem;
-//   object-fit: cover;
-// }
-
 .case-card__content {
-  padding: 2rem;
+  padding: 4.4rem;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  align-items: flex-end;
 }
 
 .case-card__title {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+  font-size: 3.2rem;
+  line-height: 140%;
+  letter-spacing: 0;
+  text-transform: uppercase;
 }
 
 .case-card__link {
   display: inline-block;
-  padding: 0.8rem 2rem;
-  background: #0be925;
+  padding: 1.25rem 4.5rem;
+  background: #ffffff;
   color: #000;
   text-decoration: none;
-  border-radius: 0.5rem;
+  border-radius: 5rem;
   font-weight: 600;
+  max-width: 16.7rem;
+  font-family: "Roboto Condensed";
+  font-size: 2rem;
+  line-height: 120%;
+  letter-spacing: 0;
 }
 
 /* Кастомные стили для навигации Swiper */
@@ -160,8 +175,7 @@
   position: relative;
   max-width: 16.8rem;
   width: 100%;
-  left: 8rem;
-  bottom: 6rem;
+  left: 3rem;
   display: flex;
   gap: 8rem; /* Расстояние 6rem между кнопками */
   justify-content: center; /* Центрируем кнопки внутри */
@@ -190,42 +204,18 @@
   max-height: 3rem;
 }
 
-// .swiper-button-next:after,
-// .swiper-button-prev:after {
-//   font-size: 2rem !important;
-// }
-
-// .swiper-pagination {
-//   background: white !important;
-//   opacity: 0.5 !important;
-//   width: 3rem;
-//   height: 3rem;
-// }
-
-// .swiper-pagination-active {
-//   background: #0be925 !important;
-//   opacity: 1 !important;
-// }
-
 /* Нумерация под слайдом */
 .slide-number {
   position: absolute;
-  bottom: -7rem;
-  right: 18.5rem;
-  // left: 10rem;
+  bottom: -14rem;
+  left: 6%;
+  transform: translateX(-50%);
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  // margin-top: 2rem;
-  // opacity: 0.3;
   transition: opacity 0.3s ease;
 }
-
-/* Активный слайд - номер виден хорошо */
-// .swiper-slide-active .slide-number {
-//   opacity: 1;
-// }
 
 /* Номер */
 .slide-number .number {

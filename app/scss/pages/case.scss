@@ -58,14 +58,17 @@
       color: #b1a16a;
     }
   }
-  &__btn {
+  &__order {
     margin-top: 5.2rem;
-    margin-left: 42.6rem;
+    margin-left: -35.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     &__img {
       max-width: 25.55rem;
       margin-top: 3rem;
     }
-    & button {
+    &__text {
       max-width: 16.3rem;
       background: none;
       border: none;
@@ -74,8 +77,7 @@
       font-family: "Roboto Condensed";
       font-size: 2rem;
       line-height: 120%;
-      right: 21rem;
-      top: 2rem;
+      bottom: 6rem;
     }
   }
 }

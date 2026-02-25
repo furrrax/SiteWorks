@@ -105,27 +105,30 @@
     left: 12rem;
     bottom: 5.5rem;
   }
-  &__order {
-    position: relative;
-    left: 38rem;
-    bottom: 23rem;
-    display: flex;
-    justify-content: center;
+  &__btn {
+    max-width: 29rem;
+    position: absolute;
+    bottom: 3rem;
+    left: 84rem;
+    &__order {
+      position: relative;
+      display: flex;
+      justify-content: center;
 
-    &__img {
-      max-width: 29rem;
-    }
-    &__text {
-      font-family: "Roboto Condensed";
-      font-weight: 400;
-      letter-spacing: 0.05rem;
-      font-size: 2rem;
-      line-height: 120%;
-      color: #ffffff;
-      border-bottom: 0.3rem solid #ffffff;
-      position: absolute;
-      bottom: 4.5rem;
-      right: 50rem;
+      &__img {
+        max-width: 29rem;
+      }
+      &__text {
+        font-family: "Roboto Condensed";
+        font-weight: 400;
+        letter-spacing: 0.05rem;
+        font-size: 2rem;
+        line-height: 120%;
+        color: #ffffff;
+        border-bottom: 0.3rem solid #ffffff;
+        position: absolute;
+        bottom: 4.5rem;
+      }
     }
   }
 }

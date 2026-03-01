@@ -8,7 +8,7 @@ import "@utils/wrapperFade.js";
 import { animateText } from "@utils/splitAnimationText.js";
 
 // Импортируем курсор
-import { initCursor } from "@utils/cursor.js";
+// import { initCursor } from "@utils/cursor.js";
 
 // Импортируем модуль переключения тем
 import {
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initThemeToggleButton();
 
   // Инициализируем курсор
-  initCursor();
+  // initCursor();
 
   // Инициализируем страницы
   initHomePage();
@@ -146,7 +146,7 @@ const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
   loop: true,
   loopedSlides: 5,  //кол-во слайдов
-  slidesPerView: 'auto', //видимые слайды
+  slidesPerView: 3, //видимые слайды
   spaceBetween: 40, //отступы между слайдами
   initialSlide: 1, 
   navigation: {

@@ -31,6 +31,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-around;
+    margin-bottom: 16rem;
     &__h2 {
       display: flex;
       gap: 2.5rem;
@@ -58,23 +59,30 @@
       color: #b1a16a;
     }
   }
+  &__btn {
+    max-width: 30rem;
+    position: absolute;
+    left: 20%;
+    top: 19rem;
+  }
   &__order {
-    margin-top: 5.2rem;
-    margin-left: 31%;
+    position: relative;
+
     &__img {
       max-width: 25.55rem;
-      margin-top: 3rem;
+      // margin-top: 3rem;
     }
     &__text {
       max-width: 16.3rem;
       background: none;
       border: none;
       color: #ffffff;
-      position: relative;
+      position: absolute;
       font-family: "Roboto Condensed";
       font-size: 2rem;
       line-height: 120%;
-      bottom: 6rem;
+      bottom: 3rem;
+      left: 21%;
     }
   }
 }

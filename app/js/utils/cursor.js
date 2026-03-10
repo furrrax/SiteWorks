@@ -31,10 +31,10 @@ export function initCursor() {
   hoverablesArea = document.querySelectorAll('.hoverable-area');
 
   // Добавляем обработчики событий
-  addEventListeners();
+  // addEventListeners();
 
   // Обновляем цвета курсора
-  updateCursorColors();
+  // updateCursorColors();
 }
 
 /**

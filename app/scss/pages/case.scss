@@ -67,6 +67,7 @@
   }
   &__order {
     position: relative;
+
     &__img {
       max-width: 25.55rem;
       // margin-top: 3rem;
@@ -182,7 +183,7 @@
   position: relative;
   max-width: 16.8rem;
   width: 100%;
-  left: 3rem;
+  left: 6%;
   display: flex;
   gap: 8rem; /* Расстояние 6rem между кнопками */
   justify-content: center; /* Центрируем кнопки внутри */

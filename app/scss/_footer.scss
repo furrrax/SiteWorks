@@ -15,6 +15,10 @@
     &__btn {
       position: relative;
       width: 18.7rem;
+      cursor: pointer;
+      &__img {
+        width: 18.7rem;
+      }
       &__el {
         position: absolute;
         font-family: "Roboto Condensed";
@@ -46,6 +50,10 @@
           line-height: 120%;
           letter-spacing: 0;
           text-transform: uppercase;
+        }
+        &__item__link:hover {
+          border-bottom: 0.2rem solid #14f958;
+          color: #14f958;
         }
       }
     }
@@ -105,6 +113,10 @@
       line-height: 120%;
       border-bottom: 1px solid #a4a4a4;
       color: #a4a4a4;
+      cursor: pointer;
+    }
+    &__el:hover {
+      color: #fff !important;
     }
   }
 }

@@ -65,6 +65,7 @@
     max-width: 59.5rem;
     margin: 2.4rem auto 0;
     position: relative;
+    overflow: hidden;
     input,
     textarea {
       align-items: center;
@@ -75,24 +76,31 @@
       font-family: "Roboto Condensed";
       font-size: 1.8rem;
       line-height: 120%;
-      color: #DDDDDD;
+      color: #dddddd;
     }
     button {
-      max-width: 16.5rem;
       background: none;
       border: none;
       color: #ffffff;
-      margin: 0 auto;
+      margin: 4rem auto;
       position: relative;
-      bottom: 8rem;
       font-family: "Roboto Condensed";
       font-size: 2rem;
       line-height: 120%;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 10rem;
+      width: 22rem;
     }
   }
   &__btn {
-    max-width: 25.9rem;
-    margin: 0 auto;
-    margin-top: 3rem;
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 26rem;
   }
 }

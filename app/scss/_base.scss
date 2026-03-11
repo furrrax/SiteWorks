@@ -1290,7 +1290,7 @@ svg {
 }
 //пульсирующая кнопка
 .heart_btn {
-  animation: pulse 1s infinite 1s;
+  animation: pulse 2s infinite 2s;
   cursor: pointer;
 }
 .heart_btn:hover{
@@ -1298,5 +1298,5 @@ svg {
   transform: scale(1.05);
 }
 .heart_btn:not(:hover) {
-  animation: pulse 1s infinite 1s;
+  animation: pulse 2s infinite 2s;
 }

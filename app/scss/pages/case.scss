@@ -67,22 +67,20 @@
   }
   &__order {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &__img {
-      max-width: 25.55rem;
-      // margin-top: 3rem;
+      width: 25.55rem;
     }
     &__text {
-      max-width: 16.3rem;
-      background: none;
-      border: none;
       color: #ffffff;
       position: absolute;
       font-family: "Roboto Condensed";
       font-size: 2rem;
       line-height: 120%;
       bottom: 3rem;
-      left: 21%;
     }
   }
 }

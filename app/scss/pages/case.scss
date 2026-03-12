@@ -62,7 +62,7 @@
   &__btn {
     max-width: 30rem;
     position: absolute;
-    left: 20%;
+    left: 28%;
     top: 19rem;
   }
   &__order {
@@ -96,14 +96,23 @@
   height: 40.7rem;
   padding-top: 7rem;
   overflow: visible !important;
-  padding-left: 24rem;
+  // padding-left: 24rem;
+}
+
+.swiper-wrapper {
+  /* Выравнивание для начального отображения кусочка слева */
+  justify-content: flex-start;
 }
 
 /* Стили для слайда */
-.case-swiper-list-item {
+.swiper-slide {
   display: flex;
-  width: 41.3rem !important;
-  transition: transform 0.3s ease, opacity 0.3s ease !important;
+  width: calc((100% - 80px) / 3);
+  margin-right: 40px !important; /* Важно: переопределяем отступ через CSS */
+  flex-shrink: 0;
+  transition:
+  transform 0.3s ease,
+  opacity 0.3s ease !important;
   transform: translateY(0);
   position: relative;
 }
@@ -113,6 +122,10 @@
 }
 .case-swiper-list-item.swiper-slide-next {
   transform: translateY(-16.5rem) !important;
+}
+
+.case-swiper .swiper-slide:first-child {
+  margin-left: 22%; /* Регулируйте размер видимого кусочка */
 }
 
 /* Карточка проекта */
@@ -192,17 +205,18 @@
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #ffffff;
+  color: #0be925;
   width: 8rem !important;
   height: 8rem !important;
-  background: #0be925;
+  background: #ffffff;
   border-radius: 50%;
+  border: 3px solid #0be925;
+
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  color: #0be925;
-  background: #ffffff;
-  border: 3px solid #0be925;
+  color: #ffffff;
+  background: #0be925;
 }
 
 .swiper-navigation-icon {

@@ -1,8 +1,7 @@
-// Тут будут стили для хедера
 .header {
   background-color: #0b0d0d;
-  height: 6.8rem;
-  box-shadow: 0.1rem 0 2rem 1.1rem rgb(0 0 0),
+  box-shadow:
+    0.1rem 0 2rem 1.1rem rgb(0 0 0),
     inset 0 0 2rem -1rem rgb(0 0 0 / 50%);
   &__container {
     display: flex;
@@ -15,7 +14,7 @@
     width: 100%;
     display: contents;
   }
-  
+
   &__social {
     display: flex;
     color: #696969;
@@ -89,9 +88,24 @@
     line-height: 100%;
     letter-spacing: 0.05rem;
     text-align: center;
+    position: relative;
 
-    &:hover {
-      color: #14f958;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0.2rem;
+      background-color: #0be925;
+      transition: width 0.3s ease;
     }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+  &__item__link:hover {
+    color: #0be925;
   }
 }

@@ -28,9 +28,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
 @font-face {
   font-family: "FE Hero";
-  src: url("@fonts/FEHero-Regular.woff2") format("woff2"),
-    url("@fonts/FEHero-Regular.woff") format("woff");
-  font-style: normal;
+  src: url("@fonts/FEHero-Regular.woff2") format("woff2")
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");

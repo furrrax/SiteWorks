@@ -132,9 +132,22 @@
         color: #ffffff;
         position: relative;
         bottom: 5.5rem;
+        display: inline-block;
+        padding-bottom: 0.4rem;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 0.2rem;
+          background-color: #ffffff;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+        }
       }
-      &__text:hover {
-        border-bottom: 0.3rem solid #ffffff;
+      &__text:hover::after {
+        opacity: 1;
       }
     }
   }

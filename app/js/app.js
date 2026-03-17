@@ -142,18 +142,34 @@ $(document).ready(function () {
 import Swiper from "swiper";
 import { Navigation } from "swiper/modules";
 
+// const swiper = new Swiper(".case-swiper", {
+//   modules: [Navigation],
+//   loop: true,
+//   loopedSlides: 5,  //кол-во слайдов
+//   slidesPerView: 3, //видимые слайды
+//   spaceBetween: 40, //отступы между слайдами
+//   initialSlide: 1, 
+//   navigation: {
+//     prevEl: ".swiper-button-prev",
+//     nextEl: ".swiper-button-next",
+//   },
+// });
+
+// __________
+
+
 const swiper = new Swiper(".case-swiper", {
   modules: [Navigation],
   loop: true,
-  loopedSlides: 5,  //кол-во слайдов
-  slidesPerView: 3, //видимые слайды
-  spaceBetween: 40, //отступы между слайдами
-  initialSlide: 1, 
+  loopedSlides: 5,
+  slidesPerView: 3,
+  spaceBetween: 40,
+  initialSlide: 1,
+  slidesOffsetBefore: 50,
   navigation: {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
 });
-
 
 

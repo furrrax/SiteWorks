@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container header__container">
     <a href="#start" class="header__logo logo">
-      <img src="@img/logo.svg" alt="Logo">
+      <img src="@img/logo.svg" alt="Logo" />
     </a>
 
     <nav class="header__nav nav">
@@ -25,19 +25,37 @@
     </nav>
 
     <div class="header__social">
-      <a
-        class="header__social__link"
-        href="#"
-      >
-        Telegram
-      </a>
+      <a class="header__social__link" href="#"> Telegram </a>
       <span class="header__social__link__el">или</span>
-      <a
-        class="header__social__link"
-        href="#"
-      >
-        WhatsApp
-      </a>
+      <a class="header__social__link" href="#"> WhatsApp </a>
+    </div>
+
+    <div class="menu" id="menuOverlay">
+      <div class="menu-nav">
+        <ul>
+          <li><a href="#steps" class="menu-link">Этапы разработки</a></li>
+          <li><a href="#team" class="menu-link">Команда</a></li>
+          <li><a href="#services" class="menu-link">Услуги</a></li>
+          <li><a href="#cases" class="menu-link">Кейсы</a></li>
+          <li><a href="#contacts" class="menu-link">Контакты</a></li>
+        </ul>
+        <div class="contacts">
+          <a href="#" class="contact telegram" id="telegramLink">Telegram</a>
+          <a href="#" class="contact whatsapp" id="whatsappLink">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+    <div class="nav__mobile__btn">
+      <img
+        class="nav__mobile__btn__menu"
+        src="@img/menu.svg"
+        alt="мобильное меню"
+      />
+      <img
+        class="nav__mobile__btn__close"
+        src="@img/popup-cross.svg"
+        alt="крестик закрытия мобильного меню"
+      />
     </div>
   </div>
 </header>

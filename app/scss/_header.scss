@@ -10,9 +10,8 @@
     padding-top: 2.2rem;
   }
   &__logo {
-    min-width: 16.6rem;
-    width: 100%;
-    display: contents;
+    width: 16.6rem;
+    display: block;
   }
 
   &__social {
@@ -39,42 +38,10 @@
         font-size: 1.6rem;
         line-height: 1;
         letter-spacing: 0.05rem;
-        // text-align: center;
       }
     }
   }
 }
-.logo__content {
-  display: flex;
-  padding-right: 0.3rem;
-  text-transform: uppercase;
-  align-items: center;
-  font-family: "FE Hero";
-  font-weight: 400;
-  font-size: 3.2rem;
-  line-height: 100%;
-  letter-spacing: 0.1rem;
-  text-align: center;
-}
-.logo__text {
-  z-index: 1;
-  &__green {
-    color: #0be925;
-  }
-}
-
-.logo__textEnd {
-  z-index: 1;
-  font-size: 1rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  line-height: 1.11;
-  letter-spacing: 0;
-  text-transform: lowercase;
-  display: flex;
-  align-items: flex-end;
-}
-
 .nav__list {
   list-style-type: none;
   display: flex;
@@ -107,5 +74,177 @@
   }
   &__item__link:hover {
     color: #0be925;
+  }
+}
+
+.menu,
+.nav__mobile__btn {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  .header__container {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav__mobile__btn {
+    display: block;
+  }
+  .header__nav,
+  .header__social,
+  .nav__mobile__btn__close {
+    display: none;
+  }
+  .header__container {
+    justify-content: space-between;
+    margin: 0 2.2rem;
+  }
+
+  /* ========== БУРГЕР-КНОПКА (контейнер с двумя иконками) ========== */
+  .nav__mobile__btn {
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    z-index: 1001;
+    transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+  }
+
+  /* обе иконки позиционируются абсолютно внутри кнопки */
+  .nav__mobile__btn img {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    transition: opacity 0.25s ease-in-out;
+  }
+
+  /* ========== ВЫЕЗЖАЮЩЕЕ МЕНЮ (оверлей) ========== */
+  .menu {
+    font-family: "Roboto";
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 5rem 4.5rem;
+    background: black;
+    border-radius: 0 0 2.5rem 2.5rem;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0.3s,
+      opacity 0.4s cubic-bezier(0.2, 0.9, 0.4, 1);
+    overflow-y: auto;
+    border: 1px solid #0be925;
+  }
+
+  .menu.menu--open {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  /* навигационная панель внутри */
+  .menu-nav {
+    display: none;
+    max-width: 500px;
+    width: 90%;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transform: translateY(20px);
+    transition: transform 0.5s cubic-bezier(0.2, 0.9, 0.4, 1);
+  }
+
+  .menu.menu--open .menu-nav {
+    transform: translateY(0);
+  }
+
+  .menu-nav ul {
+    list-style: none;
+    margin-bottom: 3rem;
+  }
+
+  .menu-nav li {
+    margin: 2rem 0;
+  }
+
+  .menu-nav a {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #f4f7fb;
+    transition: all 0.2s ease;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 60px;
+    letter-spacing: -0.3px;
+  }
+
+  .menu-nav.active {
+    display: block;
+    transform: translateY(0);
+  }
+
+  .menu-nav a:hover {
+    color: #14f958;
+    text-decoration: underline #14f958;
+    transform: scale(1.02);
+  }
+
+  /* контакты */
+  .contacts {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 2px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .contact {
+    font-size: 1.5rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-decoration: none !important;
+    transition: all 0.2s;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .contact.telegram:hover {
+    background: #2c98f0;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px -8px rgba(44, 152, 240, 0.4);
+  }
+
+  .contact.whatsapp:hover {
+    background: #25d366;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 20px -8px rgba(37, 211, 102, 0.4);
+  }
+  @media (max-width: 640px) {
+    .menu.menu--open {
+      width: 100%;
+      padding: 4rem 3.5rem;
+    }
+  }
+  @media (max-width: 380px) {
+    .menu.menu--open {
+      padding: 3rem 2rem;
+    }
+    .menu-nav a {
+      font-size: 1.8rem;
+    }
+    .nav__mobile__btn,
+    .nav__mobile__btn img {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 }

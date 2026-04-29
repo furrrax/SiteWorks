@@ -154,68 +154,83 @@ const swiper = new Swiper(".case-swiper", {
     prevEl: ".swiper-button-prev",
     nextEl: ".swiper-button-next",
   },
+  breakpoints: {
+  0: {
+    slidesPerView: 1,
+    spaceBetween: 40,
+    initialSlide: 0,
+  },
+  610: {
+    slidesPerView: 2,
+    spaceBetween: 20,
+  },
+  769: {
+    slidesPerView: 3,
+    spaceBetween: 40,
+  },
+}
 });
 
 //бургер
-(function() {
-    const overlay = document.getElementById('menuOverlay');
-    const burgerBtn = document.querySelector('.nav__mobile__btn');
-    const burgerIcon = document.querySelector('.nav__mobile__btn__menu');
-    const closeIcon = document.querySelector('.nav__mobile__btn__close');
-    const menuNav = document.querySelector('.menu-nav');
-    const navItems = document.querySelectorAll('.menu-link, .contact');
+(function () {
+  const overlay = document.getElementById("menuOverlay");
+  const burgerBtn = document.querySelector(".nav__mobile__btn");
+  const burgerIcon = document.querySelector(".nav__mobile__btn__menu");
+  const closeIcon = document.querySelector(".nav__mobile__btn__close");
+  const menuNav = document.querySelector(".menu-nav");
+  const navItems = document.querySelectorAll(".menu-link, .contact");
 
-    // Функция открытия
-    function openMenu() {
-        overlay.classList.add('menu--open');      // показываем оверлей
-        document.body.classList.add('menu-open'); // блокируем прокрутку (опционально)
-        menuNav.classList.add('active');          // запускаем анимацию контента
-        burgerIcon.style.display = 'none';
-        closeIcon.style.display = 'block';
-        document.body.style.overflow = 'hidden';  // гарантированная блокировка
+  // Функция открытия
+  function openMenu() {
+    overlay.classList.add("menu--open"); // показываем оверлей
+    document.body.classList.add("menu-open"); // блокируем прокрутку (опционально)
+    menuNav.classList.add("active"); // запускаем анимацию контента
+    burgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
+    document.body.style.overflow = "hidden"; // гарантированная блокировка
+  }
+
+  // Функция закрытия
+  function closeMenu() {
+    overlay.classList.remove("menu--open");
+    document.body.classList.remove("menu-open");
+    menuNav.classList.remove("active");
+    setTimeout(() => {
+      burgerIcon.style.display = "block";
+      closeIcon.style.display = "none";
+      document.body.style.overflow = "";
+    }, 300); // таймаут соответствует длительности анимации
+  }
+
+  // Клик по бургер-кнопке (переключение)
+  burgerBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    if (overlay.classList.contains("menu--open")) {
+      closeMenu();
+    } else {
+      openMenu();
     }
+  });
 
-    // Функция закрытия
-    function closeMenu() {
-        overlay.classList.remove('menu--open');
-        document.body.classList.remove('menu-open');
-        menuNav.classList.remove('active');
-        setTimeout(() => {
-            burgerIcon.style.display = 'block';
-            closeIcon.style.display = 'none';
-            document.body.style.overflow = '';
-        }, 300); // таймаут соответствует длительности анимации
+  // Закрытие по клику на фон (на сам оверлей)
+  overlay.addEventListener("click", function (e) {
+    if (e.target === overlay) {
+      closeMenu();
     }
+  });
 
-    // Клик по бургер-кнопке (переключение)
-    burgerBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        if (overlay.classList.contains('menu--open')) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
+  // Закрытие по клику на любой пункт меню
+  navItems.forEach((item) => {
+    item.addEventListener("click", function (e) {
+      if (this.getAttribute("href") === "#") e.preventDefault();
+      closeMenu();
     });
+  });
 
-    // Закрытие по клику на фон (на сам оверлей)
-           overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) {
-            closeMenu();
-        }
-    });
-
-    // Закрытие по клику на любой пункт меню
-    navItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            if (this.getAttribute('href') === '#') e.preventDefault();
-            closeMenu();
-        });
-    });
-
-    // Закрытие по Escape
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && overlay.classList.contains('menu--open')) {
-            closeMenu();
-        }
-    });
+  // Закрытие по Escape
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && overlay.classList.contains("menu--open")) {
+      closeMenu();
+    }
+  });
 })();

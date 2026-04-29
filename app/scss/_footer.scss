@@ -15,6 +15,10 @@
     &__btn {
       position: relative;
       width: 18.7rem;
+      cursor: pointer;
+      &__img {
+        width: 18.7rem;
+      }
       &__el {
         position: absolute;
         font-family: "Roboto Condensed";
@@ -32,20 +36,49 @@
   &__arr {
     display: flex;
     justify-content: space-between;
-    &__nav {
+        &__nav {
       margin-right: -31rem;
+      
       &__list {
         gap: 2.8rem;
         display: flex;
         flex-direction: column;
-        &__item__link {
-          font-family: "Roboto Condensed";
-          font-weight: 700;
-          font-style: Bold;
-          font-size: 2.4rem;
-          line-height: 120%;
-          letter-spacing: 0;
-          text-transform: uppercase;
+        
+        &__item {
+          &__link {
+            font-family: "Roboto Condensed";
+            font-weight: 700;
+            font-size: 2.4rem;
+            line-height: 120%;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+            
+
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 0;
+              height: 0.2rem;
+              background-color: #0BE925;
+              transition: width 0.3s ease;
+            }
+            
+            /* При наведении */
+            &:hover::after {
+              width: 100%;
+            }
+          }
+          &__link:hover {
+            color: #0BE925;
+          }
+
         }
       }
     }
@@ -105,6 +138,10 @@
       line-height: 120%;
       border-bottom: 1px solid #a4a4a4;
       color: #a4a4a4;
+      cursor: pointer;
+    }
+    &__el:hover {
+      color: #fff !important;
     }
   }
 }

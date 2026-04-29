@@ -28,9 +28,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
 
 @font-face {
   font-family: "FE Hero";
-  src: url("@fonts/FEHero-Regular.woff2") format("woff2"),
-    url("@fonts/FEHero-Regular.woff") format("woff");
-  font-style: normal;
+  src: url("@fonts/FEHero-Regular.woff2") format("woff2")
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
@@ -1290,7 +1288,7 @@ svg {
 }
 //пульсирующая кнопка
 .heart_btn {
-  animation: pulse 1s infinite 1s;
+  animation: pulse 2s infinite 2s;
   cursor: pointer;
 }
 .heart_btn:hover{
@@ -1298,5 +1296,5 @@ svg {
   transform: scale(1.05);
 }
 .heart_btn:not(:hover) {
-  animation: pulse 1s infinite 1s;
+  animation: pulse 2s infinite 2s;
 }

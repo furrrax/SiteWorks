@@ -276,6 +276,9 @@
     width: 6.5rem !important;
     height: 6.5rem !important;
   }
+  .case-card__title {
+    font-size: 2.6rem;
+  }
 }
 @media (max-width: 610px) {
   .case__start {
@@ -296,7 +299,7 @@
   .swiper-slide {
     justify-content: center;
   }
-    .case-swiper-list-item.swiper-slide-prev,
+  .case-swiper-list-item.swiper-slide-prev,
   .case-swiper-list-item.case-swiper-list-item.swiper-slide-next {
     transform: none !important;
   }
@@ -381,7 +384,7 @@
   }
 }
 @media (max-width: 330px) {
-.swiper-navigation{
-  left: 55vw;
-}
+  .swiper-navigation {
+    left: 55vw;
+  }
 }
